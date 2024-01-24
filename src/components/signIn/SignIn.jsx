@@ -20,7 +20,6 @@ const SignIn = (props) => {
         </form>
         <div className="others">
         <p>Create your new account? <button onClick={props.handleSignUpClick}>SignUp</button></p>
-        <p>Forgot Password</p>
         </div>
       </div>
     </>
