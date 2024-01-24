@@ -14,7 +14,7 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    gap: 1.3em;
+    gap: 1em;
 
 }
 .signIn h2{
@@ -45,6 +45,16 @@
     padding: 10px 12px;
     color: #fff;
     font-size: 16px;
+}
+.errMsg{
+    font-size: 15px;
+    color: red;
+    width: 100%;
+}
+.successMsg{
+    font-size: 15px;
+    color: green;
+    width: 100%;
 }
 .signBtn{
     width: 120px;
