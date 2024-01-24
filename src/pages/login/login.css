@@ -1,0 +1,161 @@
+.loginPage {
+    width: 100%;
+    min-height: 100%;
+    height: fit-content;
+    background: linear-gradient(217deg, rgba(0, 0, 0, 0.9) 21.83%, #323232 99.34%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.4em;
+    overflow-x: hidden;
+}
+.log {
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-direction: column;
+}
+.logo h1 {
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+}
+.initial {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.forms {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+}
+.backbtn {
+    position: absolute;
+    width: 30px;
+    top: 10px;
+    left: 10px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.backbtnArrow {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    color: #fff;
+}
+.disc {
+    font-size: 24px;
+    font-weight: 200;
+    color: hsl(0, 0%, 100%);
+    width: 100%;
+    text-align: center;
+    line-height: 1.3em;
+    margin-bottom: 120px;
+}
+.entryButtons {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.entryButtons button {
+    width: 120px;
+    font-size: 16px;
+    padding: 10px 12px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 500;
+}
+.entryButtons button:nth-child(1) {
+    background-color: #fff;
+    color: #000;
+}
+.or {
+    font-size: 14px;
+    color: #fff;
+}
+.otherEntryButtons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1em;
+}
+.otherEntryButtons button {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+.otherEntryButtons button span {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+}
+.icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+}
+.icon img {
+    width: 100%;
+}
+@media (max-width: 496px) {
+    .loginPage {
+        padding: 1.2em 10px;
+    }
+    .log {
+        width: 100%;
+    }
+    .logo h1 {
+        font-size: 28px;
+        font-weight: 500;
+        color: #fff;
+    }
+    .disc {
+        font-size: 18px;
+    }
+    .forms {
+        border: 0;
+        box-shadow: 0 0 2px #fff;
+    }
+    .entryButtons {
+        width: 80%;
+    }
+    .entryButtons button {
+        width: 100px;
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+    .or {
+        font-size: 12px;
+    }
+    .icon {
+        width: 24px;
+        height: 24px;
+    }
+}
