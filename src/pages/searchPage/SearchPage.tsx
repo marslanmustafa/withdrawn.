@@ -1,10 +1,10 @@
-import './SearchPage.css'
-import Logo from '../../ui/logo/Logo'
-import { Search } from 'lucide-react'
-import SearchDropDown from '../../components/searchDropDown/SearchDropDown'
+import React from 'react';
+import './SearchPage.css';
+import Logo from '../../ui/logo/Logo';
+import { Search } from 'lucide-react';
+import SearchDropDown from '../../components/searchDropDown/SearchDropDown';
 
-
-const SearchPage = () => {
+const SearchPage: React.FC = () => {
   return (
     <div className='searchPage'>
       <div className="searchDiv">
@@ -18,7 +18,7 @@ const SearchPage = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default SearchPage
+export default SearchPage;
