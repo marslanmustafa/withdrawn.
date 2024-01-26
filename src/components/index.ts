@@ -1,5 +1,5 @@
-import SignIn from "./signin/SignIn";
-import SignUp from "./signup/SignUp";
+import SignIn from "./signIn/SignIn";
+import SignUp from "./signUp/SignUp";
 import SearchDropDown from "./searchDropDown/SearchDropDown";
 
 export {
