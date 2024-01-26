@@ -1,102 +1,97 @@
-import React, { useState, ChangeEvent, FormEvent } from "react";
+import React, { useState } from "react";
+import { Form, Input, Button } from "antd";
 import { signInHandler } from "../../firebase/auth";
 import "./signIn.css";
+import { useNavigate } from "react-router-dom";
+
+interface FormValues {
+  email: string;
+  password: string;
+}
 
 interface SignInProps {
   handleSignUpClick: () => void;
 }
 
 const SignIn: React.FC<SignInProps> = (props) => {
-  const [email, setEmail] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
-  const [emailError, setEmailError] = useState<string>('');
-  const [passwordError, setPasswordError] = useState<string>("");
+  const navigate = useNavigate();
   const [msg, setMsg] = useState<string>("");
   const [success, setSuccess] = useState<string>("");
 
-  const handleSignInClick = async (event: FormEvent) => {
-    event.preventDefault();
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
-      setEmailError("Enter a valid email");
-      return;
-    }
-    if (password.length <= 0) {
-      setPasswordError("Please Enter Password");
-      return;
-    } else if (password.length < 6) {
-      setPasswordError("Password must be at least 6 characters");
-      return;
-    }
+  const onFinish = async (values:FormValues) => {
     try {
-      await signInHandler(email, password);
+      await signInHandler(values.email, values.password);
       console.log("Sign in successful!");
       setSuccess("Sign in successful!");
       setTimeout(() => {
         setSuccess("");
-      }, 5000);
+        navigate("/search");
+      }, 3000);
     } catch (error) {
       if (error instanceof Error && error.message) {
-        console.error("Sign in error:", error.message);
+        console.error("Sign up error", error.message);
         setMsg(error.message);
       } else {
-        console.error("Sign in error:", error);
+        console.error("Sign up error:", error);
         setMsg("An unknown error occurred");
       }
       setTimeout(() => {
         setMsg("");
-      }, 5000);
+      }, 3000);
     }
   };
 
+  // const onFinishFailed = (errorInfo: any) => {
+  //   console.log("Failed:", errorInfo);
+  // };
+  const validateMessages = {
+    required: '${label} is required!',
+    types: {
+      email: '${label} is not a valid email!',
+    },
+  };
+
   return (
-    <>
-      <div className="signIn">
-        <form className="form">
-          <h2>Sign In</h2>
-          <p className="errMsg">{msg}</p>
-          <p className="successMsg">{success}</p>
-          <div className="inputBox0">
-            <span>Email</span>
-            <input
-              type="email"
-              placeholder="Enter Email"
-              value={email}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => {
-                setEmail(e.target.value);
-                setEmailError('');
-              }}
-              required
-            />
-            {emailError && <p className="errMsg">{emailError}</p>}
-          </div>
-          <div className="inputBox0">
-            <span>Password</span>
-            <input
-              type="password"
-              placeholder="Enter Password"
-              value={password}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => {
-                setPassword(e.target.value);
-                setPasswordError("");
-              }}
-              required
-            />
-            {passwordError && <p className="errMsg">{passwordError}</p>}
-          </div>
-          <button className="signBtn" onClick={handleSignInClick}>
+    <div className="signIn">
+      <Form<FormValues>
+        name="signInForm"
+        initialValues={{ remember: true }}
+        onFinish={onFinish}
+        validateMessages={validateMessages}
+      >
+        <h2>Sign In</h2>
+        {!success?<p className="errMsg">{msg}</p>:<p className="successMsg">{success}</p> }
+        
+        <Form.Item
+          className="inputBox0"
+          label="Email"
+          name="email"
+          rules={[{ type: 'email', required: true, message: 'Please input your email!' }]}
+        >
+          <Input placeholder="Enter Email" />
+        </Form.Item>
+        <Form.Item
+          className="inputBox0"
+          label="Password"
+          name="password"
+          rules={[{ required: true, message: 'Please input your password!' }]}
+        >
+          <Input.Password placeholder="Enter Password" />
+        </Form.Item>
+        <Form.Item >
+          <Button type="primary" htmlType="submit" className="signBtn">
             Sign In
-          </button>
-        </form>
-        <div className="others">
-          <p>
-            Create your new account?{" "}
-            <button onClick={props.handleSignUpClick}>SignUp</button>
-          </p>
-          <p>Forgot Password</p>
-        </div>
+          </Button>
+        </Form.Item>
+      </Form>
+      <div className="others">
+        <p>
+          Create your new account?{" "}
+          <button type="button" onClick={props.handleSignUpClick}>SignUp</button>
+        </p>
+        {/* <p>Forgot Password</p> */}
       </div>
-    </>
+    </div>
   );
 };
 
