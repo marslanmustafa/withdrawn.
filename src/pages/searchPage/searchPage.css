@@ -1,79 +1,87 @@
 .searchPage {
-    width: 100%;
-    min-height: 100%;
-    height: fit-content;
-    background: linear-gradient(217deg, rgba(0, 0, 0, 0.9) 21.83%, #323232 99.34%);
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 1.4em;
-    overflow-x: hidden;
+  width: 100%;
+  min-height: 100%;
+  height: fit-content;
+  background: linear-gradient(217deg, rgba(0, 0, 0, 0.9) 21.83%, #323232 99.34%);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1.4em;
+  overflow-x: hidden;
 }
-.searchDiv{
-    width: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    padding: 1em 0;
-    flex-direction: column;
+
+.searchDiv {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 1em 0;
+  flex-direction: column;
 }
-.search{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
+
+.search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
 }
-.searchBar{
-    width: 100%;
-    background-color: transparent;
-    border: 1px solid #fff;
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 6px 14px;
-    cursor: pointer;
-    position: relative;
+
+.searchBar {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 14px;
+  cursor: pointer;
+  position: relative;
 }
-.searchIcon{
-    width: 30px;
-    height: 30px;
-    color: #fff;
-    border-radius: 50%;
-    cursor: pointer;
+
+.searchIcon {
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
 }
-.searchBar input{
-    width: calc(100% - 35px);
-    float: right;
-    background-color: transparent;
-    color: #fff;
-    font-size: 16px;
-    border: transparent;
-    outline: none;
-    font-size: 14px;
+
+.searchBar input {
+  width: calc(100% - 35px);
+  float: right;
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+  border: transparent;
+  outline: none;
+  font-size: 14px;
 }
 
 @media (max-width: 496px) {
-    .searchPage {
-        padding: 1.2em 10px;
-    }
+  .searchPage {
+    padding: 1.2em 10px;
+  }
 
-    .searchDiv{
-        width: 100%;
-        gap: 12px;
-    }
-    .searchBar{
-        padding: 6px 12px;
-    }
-    .searchIcon {
-        width: 24px;
-        height: 24px;
-    }
-    .searchBar input{
+  .searchDiv {
+    width: 100%;
+    gap: 12px;
+  }
+
+  .searchBar {
+    padding: 6px 12px;
+  }
+
+  .searchIcon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .searchBar input {
     width: calc(100% - 30px);
-        font-size: 14px;
-    }
+    font-size: 14px;
+  }
 }

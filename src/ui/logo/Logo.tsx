@@ -1,10 +1,10 @@
-import './logo.css'
+import './Logo.css'
 
 const logo = () => {
   return (
     <div className="logo">
-    <h1>WITHDRAWN.</h1>
-  </div>
+      <h1>WITHDRAWN.</h1>
+    </div>
   )
 }
 

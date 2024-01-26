@@ -1,12 +1,13 @@
 .logo h1 {
-    font-size: 30px;
+  font-size: 30px;
+  font-weight: 500;
+  color: #fff;
+}
+
+@media (max-width: 496px) {
+  .logo h1 {
+    font-size: 28px;
     font-weight: 500;
     color: #fff;
-}
-@media (max-width: 496px) {
-    .logo h1 {
-        font-size: 28px;
-        font-weight: 500;
-        color: #fff;
-    }
+  }
 }
