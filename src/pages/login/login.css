@@ -9,7 +9,6 @@
   flex-direction: column;
   overflow-x: hidden;
 }
-
 .log {
   width: 400px;
   display: flex;
@@ -19,7 +18,6 @@
   flex-direction: column;
   padding: 1.2em 0;
 }
-
 .initial {
   width: 100%;
   display: flex;
@@ -27,7 +25,6 @@
   justify-content: space-between;
   flex-direction: column;
 }
-
 .forms {
   position: relative;
   width: 100%;
@@ -35,7 +32,6 @@
   border: 1px solid #fff;
   border-radius: 20px;
 }
-
 .backbtn {
   position: absolute;
   width: 20px;
@@ -49,7 +45,6 @@
   align-items: center;
   justify-content: center;
 }
-
 .backbtnArrow {
   position: absolute;
   width: 18px;
@@ -57,7 +52,6 @@
   background-color: transparent;
   color: #fff;
 }
-
 .disc {
   font-size: 24px;
   font-weight: 200;
@@ -67,16 +61,14 @@
   line-height: 1.4em;
   margin: 14px 0;
 }
-
-.authButtonDiv {
+.authButtonDiv{
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-
+  
 }
-
-.authButtons {
+.authButtons{
   width: 400px;
   display: flex;
   align-items: center;
@@ -85,14 +77,12 @@
   flex-direction: column;
   padding: 1em;
 }
-
 .entryButtons {
   width: 70%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 .entryButtons button {
   width: 120px;
   font-size: 16px;
@@ -104,17 +94,14 @@
   color: #fff;
   font-weight: 500;
 }
-
 .entryButtons button:nth-child(1) {
   background-color: #fff;
   color: #000;
 }
-
 .or {
   font-size: 14px;
   color: #fff;
 }
-
 .otherEntryButtons {
   width: 100%;
   display: flex;
@@ -123,7 +110,6 @@
   flex-direction: column;
   gap: 1em;
 }
-
 .otherEntryButtons button {
   width: 100%;
   background-color: transparent;
@@ -135,98 +121,86 @@
   padding: 8px 12px;
   cursor: pointer;
 }
-
 .otherEntryButtons button span {
   width: 100%;
   text-align: center;
   font-size: 14px;
   color: #fff;
 }
-
 .icon {
   width: 28px;
   height: 28px;
   border-radius: 50%;
 }
-
 .icon img {
   width: 100%;
 }
-
 @media (max-width: 768px) {
-    .loginPage{
-        background: #000;
-    }
-    .log{
-        padding: 3em 10px 10px 10px;
-    }
-    .disc {
-        font-size: 20px;
-        margin-bottom: 1.4em 0 0 0;
-    }
-    .authButtonDiv{
-        background-color: #fff;  
-    }
-    .entryButtons button {
-        background-color: transparent;
-        border: 1px solid #000;
-        color: #000;
-    }
-    .entryButtons button:nth-child(1) {
-        background-color: #000;
-        color: #fff;
-    }
-    .or {
-        color: #000;
-    }
-    .otherEntryButtons button {
-        width: 100%;
-        border: 1px solid #000;
-    }
-    .otherEntryButtons button span {
-        color: #000;
-    }
+  .loginPage{
+      background: #000;
+  }
+  .log{
+      padding: 3em 10px 10px 10px;
+  }
+  .disc {
+      font-size: 20px;
+      margin-bottom: 1.4em 0 0 0;
+  }
+  .authButtonDiv{
+      background-color: #fff;  
+  }
+  .entryButtons button {
+      background-color: transparent;
+      border: 1px solid #000;
+      color: #000;
+  }
+  .entryButtons button:nth-child(1) {
+      background-color: #000;
+      color: #fff;
+  }
+  .or {
+      color: #000;
+  }
+  .otherEntryButtons button {
+      width: 100%;
+      border: 1px solid #000;
+  }
+  .otherEntryButtons button span {
+      color: #000;
+  }
 }
-
 @media (max-width: 496px) {
-  .log {
-    width: 100%;
-    padding: 2.4em 10px 10px 10px;
+  .log{
+      width: 100%;
+      padding: 2.4em 10px 10px 10px;
   }
-
   .authButtons {
-    width: 100%;
-    padding: 10px;
+      width: 100%;
+      padding: 10px;
   }
-
   /* .disc {
       font-size: 18px;
   } */
   .forms {
-    border: 0;
-    box-shadow: 0 0 2px #fff;
+      border: 0;
+      box-shadow: 0 0 2px #fff;
   }
-
   .entryButtons {
-    width: 80%;
+      width: 80%;
   }
-
   .entryButtons button {
-    width: 100px;
-    font-size: 14px;
-    padding: 8px 10px;
+      width: 100px;
+      font-size: 14px;
+      padding: 8px 10px;
   }
-
   .otherEntryButtons button {
-    padding: 10px 12px;
+      padding: 10px 12px;
   }
-
   .or {
-    font-size: 12px;
+      font-size: 12px;
   }
-
   .icon {
-    width: 14px;
-    height: 14px;
+      width: 18px;
+      height: 18px;
   }
 }
