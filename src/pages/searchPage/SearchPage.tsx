@@ -2,8 +2,7 @@ import React from 'react';
 import './searchPage.css';
 import Logo from '../../ui/logo/Logo';
 import { Search } from 'lucide-react';
-import { SearchDropDown } from '../../components/index'
-
+import { SearchDropDown } from '../../components';
 
 const SearchPage: React.FC = () => {
   return (

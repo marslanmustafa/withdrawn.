@@ -4,7 +4,7 @@ import { signUpWithGoogle } from "../../firebase/google";
 import Logo from "../../ui/logo/Logo";
 import { ArrowLeft } from "lucide-react";
 import { google, apple, appleBlack, facebook } from '../../assets/index'
-import { SignIn, SignUp} from '../../components/index'
+import {SignUp, SignIn } from "../../components";
 
 import "./login.css";
 
