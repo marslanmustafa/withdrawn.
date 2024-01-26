@@ -4,8 +4,8 @@ import { signUpWithGoogle } from "../../firebase/google";
 import Logo from "../../ui/logo/Logo";
 import { ArrowLeft } from "lucide-react";
 import { google, apple, appleBlack, facebook } from '../../assets/index'
-import SignUp from "../../components/signup/SignUp";
-import SignIn from "../../components/signin/SignIn";
+import { SignIn, SignUp} from '../../components/index'
+
 import "./login.css";
 
 const Login: React.FC = () => {
