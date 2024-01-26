@@ -1,5 +1,5 @@
 import React from 'react';
-import './SearchPage.css';
+import './searchPage.css';
 import Logo from '../../ui/logo/Logo';
 import { Search } from 'lucide-react';
 import SearchDropDown from '../../components/searchDropDown/SearchDropDown';
