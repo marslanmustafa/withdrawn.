@@ -1,5 +1,5 @@
 import SignIn from "./signIn/SignIn";
-import SignUp from "./signUp/SignUp";
+import SignUp from "./signup/SignUp";
 import SearchDropDown from "./searchDropDown/SearchDropDown";
 
 
