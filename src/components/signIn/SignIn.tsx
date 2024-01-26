@@ -1,6 +1,6 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import { signInHandler } from "../../firebase/auth";
-import "./SignIn.css";
+import "./signIn.css";
 
 interface SignInProps {
   handleSignUpClick: () => void;
