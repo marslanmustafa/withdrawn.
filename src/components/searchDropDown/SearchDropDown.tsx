@@ -1,4 +1,4 @@
-import './SearchDropDown.css'
+import './searchDropDown.css'
 
 const SearchDropDown = () => {
   return (
