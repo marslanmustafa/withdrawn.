@@ -8,6 +8,11 @@
 body {
   overflow-x: hidden !important;
 }
+a,li{
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
+}
 #app{
   width: 100vw;
   height: 100vh;

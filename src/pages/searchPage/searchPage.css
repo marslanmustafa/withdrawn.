@@ -3,14 +3,12 @@
   min-height: 100%;
   height: fit-content;
   background: linear-gradient(217deg, rgba(0, 0, 0, 0.9) 21.83%, #323232 99.34%);
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
   padding: 1.4em;
   overflow-x: hidden;
 }
 
 .searchDiv {
+  margin: auto;
   width: 400px;
   display: flex;
   align-items: center;

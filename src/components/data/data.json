@@ -1,0 +1,242 @@
+[
+  {
+    "address": "78 BARTON TERRACE, NORTH ADELAIDE",
+    "image": "https://i.pinimg.com/564x/3f/70/dd/3f70dd3c16625d5a6d53b8ebbe149c2a.jpg",
+    "details": {
+      "beds": 5,
+      "baths": 3,
+      "carSpaces": 2,
+      "area": {
+        "total": 834,
+        "unit": "m²"
+      },
+      "homeArea": {
+        "total": 356,
+        "unit": "m²"
+      }
+    },
+    "additionalDetails": {
+      "listedForSale": "Dec 2023",
+      "lastSold": "Feb 2018",
+      "ownersDetails": "Available",
+      "propertyStatus": "on-The-Market"
+    },
+    "wishlisted": false
+  },
+  {
+    "address": "45 RAWSON PENFOLD DRIVE, ROSSLYN PARK",
+    "image": "https://i.pinimg.com/564x/0b/45/18/0b4518e770e59619334a0c23a42ff90a.jpg",
+    "details": {
+      "beds": 4,
+      "baths": 3,
+      "carSpaces": 3,
+      "area": {
+        "total": 750,
+        "unit": "m²"
+      },
+      "homeArea": {
+        "total": 297,
+        "unit": "m²"
+      }
+    },
+    "additionalDetails": {
+      "listedForSale": "Dec 2023",
+      "lastSold": "Feb 2018",
+      "ownersDetails": "Available",
+      "propertyStatus": "WithDrawn"
+    },
+    "wishlisted": false
+  },
+  {
+    "address": "123 Main Street, Springfield",
+    "image": "https://i.pinimg.com/564x/0b/45/18/0b4518e770e59619334a0c23a42ff90a.jpg",
+    "details": {
+      "beds": 3,
+      "baths": 2,
+      "carSpaces": 2,
+      "area": {
+        "total": 600,
+        "unit": "m²"
+      },
+      "homeArea": {
+        "total": 250,
+        "unit": "m²"
+      }
+    },
+    "additionalDetails": {
+      "listedForSale": "Jan 2024",
+      "lastSold": "May 2020",
+      "ownersDetails": "Available",
+      "propertyStatus": "on-The-Market"
+    },
+    "wishlisted": false
+  },
+  {
+    "address": "456 Elm Street, Rivertown",
+    "image": "https://i.pinimg.com/564x/3f/70/dd/3f70dd3c16625d5a6d53b8ebbe149c2a.jpg",
+    "details": {
+      "beds": 4,
+      "baths": 3,
+      "carSpaces": 2,
+      "area": {
+        "total": 800,
+        "unit": "m²"
+      },
+      "homeArea": {
+        "total": 320,
+        "unit": "m²"
+      }
+    },
+    "additionalDetails": {
+      "listedForSale": "Feb 2024",
+      "lastSold": "Mar 2019",
+      "ownersDetails": "Available",
+      "propertyStatus": "on-The-Market"
+    },
+    "wishlisted": false
+  },
+  {
+    "address": "789 Oak Avenue, Greendale",
+    "image": "https://i.pinimg.com/564x/98/58/2c/98582c8f08ab83dd51f5d5e7924cf1f0.jpg",
+    "details": {
+      "beds": 5,
+      "baths": 4,
+      "carSpaces": 3,
+      "area": {
+        "total": 900,
+        "unit": "m²"
+      },
+      "homeArea": {
+        "total": 400,
+        "unit": "m²"
+      }
+    },
+    "additionalDetails": {
+      "listedForSale": "Mar 2024",
+      "lastSold": "Jun 2021",
+      "ownersDetails": "Available",
+      "propertyStatus": "on-The-Market"
+    },
+    "wishlisted": false
+  },
+  {
+    "address": "321 Pine Street, Hillside",
+    "image": "https://i.pinimg.com/564x/0b/45/18/0b4518e770e59619334a0c23a42ff90a.jpg",
+    "details": {
+      "beds": 3,
+      "baths": 2,
+      "carSpaces": 2,
+      "area": {
+        "total": 550,
+        "unit": "m²"
+      },
+      "homeArea": {
+        "total": 210,
+        "unit": "m²"
+      }
+    },
+    "additionalDetails": {
+      "listedForSale": "Apr 2024",
+      "lastSold": "Aug 2018",
+      "ownersDetails": "Available",
+      "propertyStatus": "on-The-Market"
+    },
+    "wishlisted": false
+  },
+  {
+    "address": "567 Maple Lane, Woodville",
+    "image": "https://i.pinimg.com/564x/98/58/2c/98582c8f08ab83dd51f5d5e7924cf1f0.jpg",
+    "details": {
+      "beds": 4,
+      "baths": 3,
+      "carSpaces": 3,
+      "area": {
+        "total": 780,
+        "unit": "m²"
+      },
+      "homeArea": {
+        "total": 320,
+        "unit": "m²"
+      }
+    },
+    "additionalDetails": {
+      "listedForSale": "May 2024",
+      "lastSold": "Sep 2020",
+      "ownersDetails": "Available",
+      "propertyStatus": "Withdrawn"
+    },
+    "wishlisted": false
+  },
+  {
+    "address": "890 Cedar Avenue, Lakeview",
+    "image": "https://i.pinimg.com/564x/3f/70/dd/3f70dd3c16625d5a6d53b8ebbe149c2a.jpg",
+    "details": {
+      "beds": 5,
+      "baths": 4,
+      "carSpaces": 2,
+      "area": {
+        "total": 950,
+        "unit": "m²"
+      },
+      "homeArea": {
+        "total": 380,
+        "unit": "m²"
+      }
+    },
+    "additionalDetails": {
+      "listedForSale": "Jun 2024",
+      "lastSold": "Dec 2019",
+      "ownersDetails": "Available",
+      "propertyStatus": "on-The-Market"
+    },
+    "wishlisted": false
+  },
+  {
+    "address": "234 Cedar Avenue, Lakeview",
+    "image": "https://i.pinimg.com/564x/98/58/2c/98582c8f08ab83dd51f5d5e7924cf1f0.jpg",
+    "details": {
+      "beds": 4,
+      "baths": 3,
+      "carSpaces": 2,
+      "area": {
+        "total": 820,
+        "unit": "m²"
+      },
+      "homeArea": {
+        "total": 320,
+        "unit": "m²"
+      }
+    },
+    "additionalDetails": {
+      "listedForSale": "Jul 2024",
+      "lastSold": "Jan 2021",
+      "ownersDetails": "Available",
+      "propertyStatus": "Withdrawn"
+    },
+    "wishlisted": false
+  },
+  {
+    "address": "678 Elm Street, Rivertown",
+    "image": "https://i.pinimg.com/564x/0b/45/18/0b4518e770e59619334a0c23a42ff90a.jpg",
+    "details": {
+      "beds": 3,
+      "baths": 2,
+      "carSpaces": 2,
+      "area": {
+        "total": 600,
+        "unit": "m²"
+      },
+      "homeArea": {
+        "total": 250,
+        "unit": "m²"
+      }
+    },
+    "additionalDetails": {
+      "listedForSale": "Aug 2024",
+      "lastSold": "Mar 2017",
+      "ownersDetails": "Available",
+      "propertyStatus": "on-The-Market"
+    },
+    "wishlisted": false
+  }
+]
