@@ -24,6 +24,7 @@
   background: #5e5e5e;
   color: #fff;
   padding: 10px;
+  cursor: pointer;
 }
 .heartIcon{
   color: #fff !important;
