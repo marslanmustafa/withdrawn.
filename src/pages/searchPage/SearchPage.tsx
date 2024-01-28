@@ -1,16 +1,31 @@
-// SearchPage.tsx
 import React, { useState } from 'react';
-import './searchPage.css';
 import Logo from '../../ui/logo/Logo';
-import { Search } from 'lucide-react';
-import { PropertyList } from '../../components';
-import propertyData from '../../components/data/data.json'
+import { Search, X } from 'lucide-react';
+import { SearchDropDown, PropertyList} from '../../components/index';
+import propertyData from '../../components/data/data.json';
+import './searchPage.css';
 
 const SearchPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [clickedSuggestion, setClickedSuggestion] = useState("");
 
   const handleSearchInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(event.target.value);
+    const query = event.target.value;
+    setSearchQuery(query);
+    setShowSuggestions(query.trim() !== '');
+  };
+
+  const onSuggestionClick = (suggestion: string) => {
+    setClickedSuggestion(suggestion);
+    setSearchQuery(suggestion); // Set the input value to the clicked suggestion
+    setShowSuggestions(false); // Hide suggestions after selection
+  };
+
+  const clearSearch = () => {
+    setSearchQuery('');
+    setClickedSuggestion('');
+    setShowSuggestions(false)
   };
 
   return (
@@ -26,11 +41,12 @@ const SearchPage: React.FC = () => {
               value={searchQuery}
               onChange={handleSearchInputChange}
             />
+            {searchQuery &&<X onClick={clearSearch} className='clearBtn'/>}
           </div>
-          {/* <SearchDropDown searchQuery={searchQuery} /> */}
+          {showSuggestions && <SearchDropDown propertyData={propertyData} searchQuery={searchQuery} onSuggestionClick={onSuggestionClick} />}
         </div>
       </div>
-      <PropertyList propertyData={propertyData} searchQuery={searchQuery} />
+      <PropertyList propertyData={propertyData} clickedSuggestion={clickedSuggestion} />
     </div>
   );
 };

@@ -47,7 +47,16 @@
   border-radius: 50%;
   cursor: pointer;
 }
-
+.clearBtn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  width: 30px;
+  height: 100%;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
 .searchBar input {
   width: calc(100% - 35px);
   float: right;

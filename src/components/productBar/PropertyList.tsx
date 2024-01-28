@@ -1,17 +1,10 @@
 import React, { useState, useEffect } from "react";
-import {
-  BedIcon,
-  BathIcon,
-  CarFrontIcon,
-  Move3DIcon,
-  HomeIcon,
-  Heart,
-} from "lucide-react";
+import { Heart, BedIcon, BathIcon, CarFrontIcon, Move3DIcon, HomeIcon } from "lucide-react";
 import "./propertyList.css";
 
 interface PropertyListProps {
   propertyData: PropertyData[];
-  searchQuery: string;
+  clickedSuggestion: string;
 }
 
 interface PropertyData {
@@ -39,12 +32,9 @@ interface PropertyData {
   wishlisted: boolean;
 }
 
-const PropertyList: React.FC<PropertyListProps> = ({
-  propertyData,
-  searchQuery,
-}) => {
+const PropertyList: React.FC<PropertyListProps> = ({ propertyData, clickedSuggestion }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [filteredProperties, setFilteredProperties] = useState<PropertyData[]>([]);
+  const [filteredProperty, setFilteredProperty] = useState<PropertyData[]>([]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -59,22 +49,22 @@ const PropertyList: React.FC<PropertyListProps> = ({
   }, []);
 
   useEffect(() => {
-    // Filter properties based on the search query
+    // Filter properties based on the clicked suggestion
     const filtered = propertyData.filter(property =>
-      property.address.toLowerCase().includes(searchQuery.toLowerCase())
+      property.address.toLowerCase().includes(clickedSuggestion.toLowerCase())
     );
-    setFilteredProperties(filtered);
-  }, [searchQuery, propertyData]);
+    setFilteredProperty(filtered);
+  }, [clickedSuggestion, propertyData]);
 
   const toggleWishlist = (index: number) => {
-    const updatedProperties = [...filteredProperties];
+    const updatedProperties = [...filteredProperty];
     updatedProperties[index].wishlisted = !updatedProperties[index].wishlisted;
-    setFilteredProperties(updatedProperties);
+    setFilteredProperty(updatedProperties);
   };
 
   return (
     <div className="propertyList">
-      {filteredProperties.map((property: PropertyData, index: number) => (
+      {filteredProperty.map((property: PropertyData, index: number) => (
         <div className="property" key={index}>
           <div className="propertyImage">
             <img src={property.image} alt="" />
@@ -134,14 +124,6 @@ const PropertyList: React.FC<PropertyListProps> = ({
                 </li>
                 <li>
                   Last sold <span>{property.additionalDetails.lastSold}</span>
-                </li>
-                <li>
-                  Owner's details{" "}
-                  <span>{property.additionalDetails.ownersDetails}</span>
-                </li>
-                <li>
-                  Property Status{" "}
-                  <span>{property.additionalDetails.propertyStatus}</span>
                 </li>
               </ul>
             </div>
