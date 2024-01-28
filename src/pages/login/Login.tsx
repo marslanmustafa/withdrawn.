@@ -1,10 +1,10 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { signUpWithGoogle } from "../../firebase/google";
 import Logo from "../../ui/logo/Logo";
 import { ArrowLeft } from "lucide-react";
 import { google, apple, appleBlack, facebook } from '../../assets/index'
-import {SignUp, SignIn } from "../../components";
+import { SignUp, SignIn } from "../../components";
 
 import "./login.css";
 
@@ -103,7 +103,7 @@ const Login: React.FC = () => {
             </button>
             <button>
               <div className="icon">
-              <img src={windowWidth > 768 ? apple : appleBlack} alt="Apple Image" />
+                <img src={windowWidth > 768 ? apple : appleBlack} alt="Apple Image" />
               </div>
               <span>continue with Apple</span>
             </button>

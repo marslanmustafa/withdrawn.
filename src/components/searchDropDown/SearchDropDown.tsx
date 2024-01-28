@@ -33,17 +33,11 @@ interface PropertyData {
 }
 
 const SearchDropDown: React.FC<SearchDropDownProps> = ({ searchQuery, propertyData, onSuggestionClick }) => {
-  // Generate suggestions based on property addresses
   const generateSuggestions = () => {
-    // Filter properties based on the search query
     const filteredProperties = propertyData.filter(property =>
       property.address.toLowerCase().includes(searchQuery.toLowerCase())
     );
-
-    // Extract unique addresses from filtered properties
     const addresses = filteredProperties.map(property => property.address);
-
-    // Return unique addresses as suggestions
     return Array.from(new Set(addresses));
   };
 

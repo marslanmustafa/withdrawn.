@@ -29,6 +29,7 @@
   height: 82px;
   margin-bottom: 20px;
 }
+
 .inputBox0 .ant-row {
   width: 100%;
   display: flex;
@@ -40,6 +41,7 @@
 .inputBox0 .ant-col {
   width: 100%;
 }
+
 .inputBox0 .ant-col label {
   width: 100%;
   font-size: 16px;
@@ -57,6 +59,7 @@
   color: #fff !important;
   font-size: 16px;
 }
+
 .inputBox1 .ant-input-affix-wrapper {
   width: 100%;
   background: transparent !important;
@@ -66,13 +69,16 @@
   color: #fff !important;
   font-size: 16px;
 }
-.inputBox1 .ant-col input::placeholder{
+
+.inputBox1 .ant-col input::placeholder {
   color: #fff !important;
   font-size: 16px;
 }
-.inputBox1 .anticon{
+
+.inputBox1 .anticon {
   color: #fff !important;
 }
+
 .errMsg {
   font-size: 15px;
   color: red;
@@ -119,7 +125,8 @@
   .signIn form {
     width: 100%;
   }
-  .signBtn{
-    transform:translateY(10px) ;
+
+  .signBtn {
+    transform: translateY(10px);
   }
 }

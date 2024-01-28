@@ -3,7 +3,7 @@ import { Form, Input, Button } from "antd";
 import { signInHandler } from "../../firebase/auth";
 import "./signIn.css";
 import { useNavigate } from "react-router-dom";
-
+import firebase from "firebase/compat/app";
 interface FormValues {
   email: string;
   password: string;
@@ -18,7 +18,7 @@ const SignIn: React.FC<SignInProps> = (props) => {
   const [msg, setMsg] = useState<string>("");
   const [success, setSuccess] = useState<string>("");
 
-  const onFinish = async (values:FormValues) => {
+  const onFinish = async (values: FormValues) => {
     try {
       await signInHandler(values.email, values.password);
       console.log("Sign in successful!");
@@ -28,22 +28,32 @@ const SignIn: React.FC<SignInProps> = (props) => {
         navigate("/search");
       }, 3000);
     } catch (error) {
-      if (error instanceof Error && error.message) {
-        console.error("Sign up error", error.message);
+      if (error instanceof Error && 'code' in error) {
+        switch ((error as firebase.auth.Error).code) {
+          case 'auth/invalid-credential':
+            setMsg('Wrong Credentials. Please try again.');
+            break;
+          case 'auth/user-not-found':
+            setMsg('Wrong Credentials. Please try again.');
+            break;
+          case 'auth/wrong-password':
+            setMsg('Wrong Credentials. Please try again.');
+            break;
+          default:
+            setMsg('An unknown authentication error occurred');
+        }
+      } else if (error instanceof Error && error.message) {
         setMsg(error.message);
       } else {
-        console.error("Sign up error:", error);
         setMsg("An unknown error occurred");
       }
+
       setTimeout(() => {
         setMsg("");
       }, 3000);
     }
   };
 
-  // const onFinishFailed = (errorInfo: any) => {
-  //   console.log("Failed:", errorInfo);
-  // };
   const validateMessages = {
     required: '${label} is required!',
     types: {
@@ -60,8 +70,8 @@ const SignIn: React.FC<SignInProps> = (props) => {
         validateMessages={validateMessages}
       >
         <h2>Sign In</h2>
-        {!success?<p className="errMsg">{msg}</p>:<p className="successMsg">{success}</p> }
-        
+        {!success ? <p className="errMsg">{msg}</p> : <p className="successMsg">{success}</p>}
+
         <Form.Item
           className="inputBox0"
           label="Email"
@@ -89,7 +99,6 @@ const SignIn: React.FC<SignInProps> = (props) => {
           Create your new account?{" "}
           <button type="button" onClick={props.handleSignUpClick}>SignUp</button>
         </p>
-        {/* <p>Forgot Password</p> */}
       </div>
     </div>
   );

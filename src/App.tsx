@@ -1,19 +1,19 @@
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import './App.css'
-import { Login, SearchPage } from './pages/index'
+import './App.css';
+import { Login, SearchPage } from './pages/index';
 
 function App() {
-
   return (
     <div id='app'>
-    <Router>
+      <Router>
         <Routes>
           <Route path="/search" element={<SearchPage />} />
           <Route path="/" element={<Login />} />
         </Routes>
       </Router>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

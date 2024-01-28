@@ -10,7 +10,6 @@ export const signUpHandler = async (email: string, password: string): Promise<Us
     const response: UserCredential = await createUserWithEmailAndPassword(auth, email, password);
     return response;
   } catch (error) {
-    console.error("Sign up error:", error);
     throw error;
   }
 };
@@ -20,7 +19,6 @@ export const signInHandler = async (email: string, password: string): Promise<Us
     const response: UserCredential = await signInWithEmailAndPassword(auth, email, password);
     return response;
   } catch (error) {
-    console.error("Sign in error:", error);
     throw error;
   }
 };
