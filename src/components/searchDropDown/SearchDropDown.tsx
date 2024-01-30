@@ -38,7 +38,9 @@ const SearchDropDown: React.FC<SearchDropDownProps> = ({ searchQuery, propertyDa
       property.address.toLowerCase().includes(searchQuery.toLowerCase())
     );
     const addresses = filteredProperties.map(property => property.address);
-    return Array.from(new Set(addresses));
+    const uniqueAddresses = Array.from(new Set(addresses)).slice(0, 8);
+  
+    return uniqueAddresses;
   };
 
   const suggestions = generateSuggestions();

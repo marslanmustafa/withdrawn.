@@ -58,6 +58,7 @@ const Login: React.FC = () => {
 
   return (
     <div className="loginPage">
+      <div className="login">
       <div className="log">
         <Logo />
         {!logIn && !signUp ? (
@@ -83,6 +84,7 @@ const Login: React.FC = () => {
           </div>
         )}
       </div>
+      </div>
       <div className="authButtonDiv">
         <div className="authButtons">
           {!logIn && !signUp ? (
@@ -103,7 +105,8 @@ const Login: React.FC = () => {
             </button>
             <button>
               <div className="icon">
-                <img src={windowWidth > 768 ? apple : appleBlack} alt="Apple Image" />
+                <img className="applewhite" src={windowWidth > 768 ? apple : appleBlack} alt="Apple Image" />
+                <img className="appleblack" src={windowWidth < 768 ? apple : appleBlack} alt="Apple Image" />
               </div>
               <span>continue with Apple</span>
             </button>

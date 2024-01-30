@@ -19,7 +19,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src/**/*.ts", "node_modules/@types"],
+  "include": ["src/**/*.ts", "node_modules/@types", "src/pages/propertiesPage/PropertiesPage.tsx"],
   "exclude": ["node_modules"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Heart, BedIcon, BathIcon, CarFrontIcon, Move3DIcon, HomeIcon } from "lucide-react";
 import "./propertyList.css";
-
-interface PropertyListProps {
-  propertyData: PropertyData[];
-  clickedSuggestion: string;
-}
+import propertyData from "../data/data.json";
+// interface PropertyListProps {
+//   propertyData: PropertyData[];
+//   clickedSuggestion: string;
+// }
 
 interface PropertyData {
   address: string;
@@ -32,9 +32,9 @@ interface PropertyData {
   wishlisted: boolean;
 }
 
-const PropertyList: React.FC<PropertyListProps> = ({ propertyData, clickedSuggestion }) => {
+const PropertyList: React.FC = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [filteredProperty, setFilteredProperty] = useState<PropertyData[]>([]);
+  const [filteredProperty, setFilteredProperty] = useState<PropertyData[]>(propertyData);
 
   useEffect(() => {
     const handleResize = () => {
@@ -48,13 +48,13 @@ const PropertyList: React.FC<PropertyListProps> = ({ propertyData, clickedSugges
     };
   }, []);
 
-  useEffect(() => {
-    // Filter properties based on the clicked suggestion
-    const filtered = propertyData.filter(property =>
-      property.address.toLowerCase().includes(clickedSuggestion.toLowerCase())
-    );
-    setFilteredProperty(filtered);
-  }, [clickedSuggestion, propertyData]);
+  // useEffect(() => {
+  //   // Filter properties based on the clicked suggestion
+  //   const filtered = propertyData.filter(property =>
+  //     property.address.toLowerCase().includes(clickedSuggestion.toLowerCase())
+  //   );
+  //   setFilteredProperty(filtered);
+  // }, [clickedSuggestion, propertyData]);
 
   const toggleWishlist = (index: number) => {
     const updatedProperties = [...filteredProperty];
@@ -78,7 +78,7 @@ const PropertyList: React.FC<PropertyListProps> = ({ propertyData, clickedSugges
               {property.wishlisted ? (
                 <Heart fill="#fff" className="heartIcon" />
               ) : (
-                "Add to Wishlist"
+                <span className="wishListBtnText">Add to Wishlist</span>
               )}
             </button>
             <h1>

@@ -1,13 +1,15 @@
-.logo h1 {
-  font-size: 30px;
-  font-weight: 500;
-  color: #fff;
+.logo {
+  margin-top: 2em;
 }
 
+.logo img {
+  width: 200px;
+}
 @media (max-width: 496px) {
-  .logo h1 {
-    font-size: 28px;
-    font-weight: 500;
-    color: #fff;
+  .logo img {
+    width: 180px;
   }
+}
+@media (max-width: 496px) {
+
 }
