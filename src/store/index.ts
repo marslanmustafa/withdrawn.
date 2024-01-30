@@ -5,3 +5,5 @@ const store = configureStore({
   reducer: { authData: auth, propertyData: property, },
 });
 export default store;
+
+

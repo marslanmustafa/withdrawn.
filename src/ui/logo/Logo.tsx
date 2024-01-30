@@ -3,7 +3,7 @@ import './logo.css'
 
 const logo = () => {
   return (
-    <div className="logo">
+    <div className="logolg">
       <img src={logoImg} alt="" />
     </div>
   )

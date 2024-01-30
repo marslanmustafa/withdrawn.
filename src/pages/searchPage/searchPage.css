@@ -57,6 +57,7 @@
   width: 30px;
   height: 100%;
   color: #fff;
+  background: #000;
   border-radius: 50%;
   cursor: pointer;
 }

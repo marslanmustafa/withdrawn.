@@ -1,15 +1,12 @@
-.logo {
+.logolg {
   margin-top: 2em;
 }
 
-.logo img {
+.logolg img {
   width: 200px;
 }
 @media (max-width: 496px) {
-  .logo img {
+  .logolg img {
     width: 180px;
   }
-}
-@media (max-width: 496px) {
-
 }

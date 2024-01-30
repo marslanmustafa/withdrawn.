@@ -12,6 +12,7 @@
   box-shadow: 0 0 3px #5e5e5e;
   display: flex;
   align-items: center;
+  gap:  10px;
 }
 .wishListBtn{
   border: 0;
@@ -45,7 +46,7 @@
 .propertyData{
   width: calc(100% - 180px);
   height: 100%;
-  padding: 10px;
+  padding: 10px 0 10px 0;
   position: relative;
 }
 .propertyData h1{
@@ -102,6 +103,7 @@
 }
 @media (max-width: 1230px) {
   .propertyList{
+    width: 100%;
     grid-template-columns: repeat(1, 1fr); 
     gap: 12px;
   }

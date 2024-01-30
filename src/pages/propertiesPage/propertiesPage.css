@@ -3,6 +3,27 @@
   min-height: 100%;
   height: fit-content;
   background: #000;
-  padding: 1.4em;
+  padding: 1.4em 1.4em 5em 1.4em;
   overflow-x: hidden;
+}
+.filtersBtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 12px;
+  border-radius: 20px;
+  background: #1f1f1f;
+  width: 100px;
+  margin: 1em auto;
+}
+.filtersBtn span{
+  color: #fff;
+  font-size: 12px;
+}
+@media (max-width:768px) {
+  .propertyPage{
+  padding: 1.4em 0 5em 0;
+    
+  }
 }
