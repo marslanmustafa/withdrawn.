@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Logo from "../../ui/logo/Logo";
 import { X } from "lucide-react";
 import { search3 } from "../../assets";
+import { useDispatch } from "react-redux";
+import { setSearchResult } from "../../store/property";
 import {
   SearchDropDown,
 } from "../../components/index";
@@ -10,6 +12,7 @@ import propertyData from "../../components/data/data.json";
 import "./searchPage.css";
 
 const SearchPage: React.FC = () => {
+  const dispatch = useDispatch();
   const [searchQuery, setSearchQuery] = useState("");
   const [showSuggestions, setShowSuggestions] = useState(false);
   const navigate = useNavigate();
@@ -25,7 +28,9 @@ const SearchPage: React.FC = () => {
 
   const onSuggestionClick = (suggestion: string) => {
     // setClickedSuggestion(suggestion);
-    console.log('suggestion',suggestion)
+    const filterArray=propertyData.filter((property)=>property.city.toLowerCase()===suggestion.toLowerCase())
+    console.log('filterArray',filterArray)
+    dispatch(setSearchResult(filterArray));
     setSearchQuery(suggestion);
     setShowSuggestions(false);
     navigate("/propertyList");

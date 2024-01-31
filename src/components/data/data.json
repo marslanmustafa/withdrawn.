@@ -1,6 +1,7 @@
 [
   { "id":1,
     "address": "78 BARTON TERRACE, NORTH ADELAIDE",
+    "city": "New York",
     "image": "https://i.pinimg.com/564x/3f/70/dd/3f70dd3c16625d5a6d53b8ebbe149c2a.jpg",
     "details": {
       "beds": 5,
@@ -24,6 +25,82 @@
     "wishlisted": false
   },
   { "id":2,
+  "address": "79 BARTON TERRACE, NORTH ADELAIDE",
+  "city": "New York",
+  "image": "https://i.pinimg.com/564x/3f/70/dd/3f70dd3c16625d5a6d53b8ebbe149c2a.jpg",
+  "details": {
+    "beds": 5,
+    "baths": 3,
+    "carSpaces": 2,
+    "area": {
+      "total": 834,
+      "unit": "m²"
+    },
+    "homeArea": {
+      "total": 356,
+      "unit": "m²"
+    }
+  },
+  "additionalDetails": {
+    "listedForSale": "Dec 2023",
+    "lastSold": "Feb 2018",
+    "ownersDetails": "Available",
+    "propertyStatus": "on-The-Market"
+  },
+  "wishlisted": false
+},
+{ "id":3,
+"address": "80 BARTON TERRACE, NORTH ADELAIDE",
+"city": "New York",
+"image": "https://i.pinimg.com/564x/3f/70/dd/3f70dd3c16625d5a6d53b8ebbe149c2a.jpg",
+"details": {
+  "beds": 5,
+  "baths": 3,
+  "carSpaces": 2,
+  "area": {
+    "total": 834,
+    "unit": "m²"
+  },
+  "homeArea": {
+    "total": 356,
+    "unit": "m²"
+  }
+},
+"additionalDetails": {
+  "listedForSale": "Dec 2023",
+  "lastSold": "Feb 2018",
+  "ownersDetails": "Available",
+  "propertyStatus": "on-The-Market"
+},
+"wishlisted": false
+},
+{ "id":4,
+"address": "81 BARTON TERRACE, NORTH ADELAIDE",
+"city": "New York",
+"image": "https://i.pinimg.com/564x/3f/70/dd/3f70dd3c16625d5a6d53b8ebbe149c2a.jpg",
+"details": {
+  "beds": 5,
+  "baths": 3,
+  "carSpaces": 2,
+  "area": {
+    "total": 834,
+    "unit": "m²"
+  },
+  "homeArea": {
+    "total": 356,
+    "unit": "m²"
+  }
+},
+"additionalDetails": {
+  "listedForSale": "Dec 2023",
+  "lastSold": "Feb 2018",
+  "ownersDetails": "Available",
+  "propertyStatus": "on-The-Market"
+},
+"wishlisted": false
+},
+  { "id":5,
+    "city": "Los Angeles",
     "address": "45 RAWSON PENFOLD DRIVE, ROSSLYN PARK",
     "image": "https://i.pinimg.com/564x/0b/45/18/0b4518e770e59619334a0c23a42ff90a.jpg",
     "details": {
@@ -47,7 +124,58 @@
     },
     "wishlisted": false
   },
-  { "id":3,
+  { "id":6,
+    "city": "Los Angeles",
+    "address": "46 RAWSON PENFOLD DRIVE, ROSSLYN PARK",
+    "image": "https://i.pinimg.com/564x/0b/45/18/0b4518e770e59619334a0c23a42ff90a.jpg",
+    "details": {
+      "beds": 4,
+      "baths": 3,
+      "carSpaces": 3,
+      "area": {
+        "total": 750,
+        "unit": "m²"
+      },
+      "homeArea": {
+        "total": 297,
+        "unit": "m²"
+      }
+    },
+    "additionalDetails": {
+      "listedForSale": "Dec 2023",
+      "lastSold": "Feb 2018",
+      "ownersDetails": "Available",
+      "propertyStatus": "WithDrawn"
+    },
+    "wishlisted": false
+  },
+  { "id":7,
+  "city": "Los Angeles",
+  "address": "47 RAWSON PENFOLD DRIVE, ROSSLYN PARK",
+  "image": "https://i.pinimg.com/564x/0b/45/18/0b4518e770e59619334a0c23a42ff90a.jpg",
+  "details": {
+    "beds": 4,
+    "baths": 3,
+    "carSpaces": 3,
+    "area": {
+      "total": 750,
+      "unit": "m²"
+    },
+    "homeArea": {
+      "total": 297,
+      "unit": "m²"
+    }
+  },
+  "additionalDetails": {
+    "listedForSale": "Dec 2023",
+    "lastSold": "Feb 2018",
+    "ownersDetails": "Available",
+    "propertyStatus": "WithDrawn"
+  },
+  "wishlisted": false
+},
+  { "id":8,
+   "city": "Houston",
     "address": "123 Main Street, Springfield",
     "image": "https://i.pinimg.com/564x/0b/45/18/0b4518e770e59619334a0c23a42ff90a.jpg",
     "details": {
@@ -71,7 +199,59 @@
     },
     "wishlisted": false
   },
-  { "id":4,
+  { "id":9,
+   "city": "Houston",
+    "address": "124 Main Street, Springfield",
+    "image": "https://i.pinimg.com/564x/0b/45/18/0b4518e770e59619334a0c23a42ff90a.jpg",
+    "details": {
+      "beds": 3,
+      "baths": 2,
+      "carSpaces": 2,
+      "area": {
+        "total": 600,
+        "unit": "m²"
+      },
+      "homeArea": {
+        "total": 250,
+        "unit": "m²"
+      }
+    },
+    "additionalDetails": {
+      "listedForSale": "Jan 2024",
+      "lastSold": "May 2020",
+      "ownersDetails": "Available",
+      "propertyStatus": "on-The-Market"
+    },
+    "wishlisted": false
+  },
+  { "id":9,
+  "city": "Houston",
+   "address": "1293 Main Street, Springfield",
+   "image": "https://i.pinimg.com/564x/0b/45/18/0b4518e770e59619334a0c23a42ff90a.jpg",
+   "details": {
+     "beds": 3,
+     "baths": 2,
+     "carSpaces": 2,
+     "area": {
+       "total": 600,
+       "unit": "m²"
+     },
+     "homeArea": {
+       "total": 250,
+       "unit": "m²"
+     }
+   },
+   "additionalDetails": {
+     "listedForSale": "Jan 2024",
+     "lastSold": "May 2020",
+     "ownersDetails": "Available",
+     "propertyStatus": "on-The-Market"
+   },
+   "wishlisted": false
+ },
+   
+  { "id":10,
+  "city": "Phoenix",
     "address": "456 Elm Street, Rivertown",
     "image": "https://i.pinimg.com/564x/3f/70/dd/3f70dd3c16625d5a6d53b8ebbe149c2a.jpg",
     "details": {
@@ -95,7 +275,8 @@
     },
     "wishlisted": false
   },
-  { "id":5,
+  { "id":11,
+  "city": "Philadelphia",
     "address": "789 Oak Avenue, Greendale",
     "image": "https://i.pinimg.com/564x/98/58/2c/98582c8f08ab83dd51f5d5e7924cf1f0.jpg",
     "details": {
@@ -119,7 +300,8 @@
     },
     "wishlisted": false
   },
-  { "id":6,
+  { "id":12,
+  "city": "San Antonio",
     "address": "321 Pine Street, Hillside",
     "image": "https://i.pinimg.com/564x/0b/45/18/0b4518e770e59619334a0c23a42ff90a.jpg",
     "details": {
@@ -143,7 +325,8 @@
     },
     "wishlisted": false
   },
-  { "id":7,
+  { "id":13,
+  "city": "San Diego",
     "address": "567 Maple Lane, Woodville",
     "image": "https://i.pinimg.com/564x/98/58/2c/98582c8f08ab83dd51f5d5e7924cf1f0.jpg",
     "details": {
@@ -167,7 +350,8 @@
     },
     "wishlisted": false
   },
-  { "id":8,
+  { "id":14,
+  "city": "Dallas",
     "address": "890 Cedar Avenue, Lakeview",
     "image": "https://i.pinimg.com/564x/3f/70/dd/3f70dd3c16625d5a6d53b8ebbe149c2a.jpg",
     "details": {
@@ -191,7 +375,8 @@
     },
     "wishlisted": false
   },
-  { "id":9,
+  { "id":15,
+  "city": "San Jose",
     "address": "234 Cedar Avenue, Lakeview",
     "image": "https://i.pinimg.com/564x/98/58/2c/98582c8f08ab83dd51f5d5e7924cf1f0.jpg",
     "details": {
@@ -215,7 +400,8 @@
     },
     "wishlisted": false
   },
-  { "id":10,
+  { "id":16,
+  "city": "San Jose",
     "address": "678 Elm Street, Rivertown",
     "image": "https://i.pinimg.com/564x/0b/45/18/0b4518e770e59619334a0c23a42ff90a.jpg",
     "details": {

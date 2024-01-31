@@ -3,10 +3,10 @@
 }
 
 .logolg img {
-  width: 200px;
+  width: 240px;
 }
 @media (max-width: 496px) {
   .logolg img {
-    width: 180px;
+    width: 200px;
   }
 }

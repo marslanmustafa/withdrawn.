@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-const initialPropertyState = { type: "", wishlistCount: 0, wishlist: [] };
+const initialPropertyState = { type: "", wishlistCount: 0, wishlist: [], searchResult: [] };
 const propertySlice = createSlice({
   name: "property",
   initialState: initialPropertyState,
@@ -7,17 +7,18 @@ const propertySlice = createSlice({
     setType(state, action) {
       state.type = action.payload;
     },
-    setAddItemInWishlist(state, action) {
-      state.wishlistCount = state.wishlistCount + 1;
+    setWishlistCount(state, action) {
+      state.wishlistCount = action.payload;
+    },
+    setWishlist(state, action) {
       state.wishlist = action.payload;
     },
-    setRemoveItemInWishlist(state, action) {
-      state.wishlistCount = state.wishlistCount - 1;
-      state.wishlist = action.payload;
+    setSearchResult(state, action) {
+      state.searchResult = action.payload;
     },
   }
 })
 export const {
-  setType, setAddItemInWishlist, setRemoveItemInWishlist
+  setType, setWishlistCount, setWishlist,setSearchResult
 } = propertySlice.actions;
 export default propertySlice.reducer;

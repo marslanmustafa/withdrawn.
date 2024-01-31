@@ -9,6 +9,7 @@ interface SearchDropDownProps {
 
 interface PropertyData {
   address: string;
+  city: string;
   image: string;
   details: {
     beds: number;
@@ -35,10 +36,10 @@ interface PropertyData {
 const SearchDropDown: React.FC<SearchDropDownProps> = ({ searchQuery, propertyData, onSuggestionClick }) => {
   const generateSuggestions = () => {
     const filteredProperties = propertyData.filter(property =>
-      property.address.toLowerCase().includes(searchQuery.toLowerCase())
+      property.city.toLowerCase().includes(searchQuery.toLowerCase())
     );
-    const addresses = filteredProperties.map(property => property.address);
-    const uniqueAddresses = Array.from(new Set(addresses)).slice(0, 8);
+    const cities = filteredProperties.map(property => property.city);
+    const uniqueAddresses = Array.from(new Set(cities)).slice(0, 8);
   
     return uniqueAddresses;
   };

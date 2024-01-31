@@ -6,6 +6,7 @@ import facebook from "./icons/facebook.png";
 import search from "./icons/search.svg";
 import search3 from "./icons/search3.svg";
 import wishlist from "./icons/wishlist.svg";
+import wishlist3 from "./icons/wishlist3.svg";
 import hamburger from "./icons/hamburger.svg";
 import filters from "./icons/filters.svg";
 import property1 from "./propertyImage/property1.jpg";
@@ -19,6 +20,7 @@ export {
   property1,
   search,
   wishlist,
+  wishlist3,
   search3,
   hamburger,
   filters,

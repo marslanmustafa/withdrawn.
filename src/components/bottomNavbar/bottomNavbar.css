@@ -1,6 +1,6 @@
 .bottomNav{
   width: 100%;
-  height: 100px;
+  height: 90px;
   background: #000;
   display: flex;
   align-items: center;
@@ -9,10 +9,11 @@
   bottom: 0;
   left: 0;
   gap: 4em;
-  z-index: 10;
+  z-index: 1;
 }
 .bottomIcon{
   position: relative;
+  z-index: 1;
 }
 .bottomIcon a{
   display: flex;
@@ -20,6 +21,10 @@
   justify-content: center;
   flex-direction: column;
   gap: 3px;
+}
+.bottomIcon img{
+  width: 32px;
+  height: 32px;
 }
 .badge{
   position: absolute;
@@ -41,8 +46,11 @@
   color: #fff;
   font-size: 12px;
 }
-@media (max-width: 496px) {
-  .bottomNav{
-    height: 80px;
-  }
+.bottomIcon a span.active{
+  font-weight: bold;
 }
+/* @media (max-width: 496px) {
+  .bottomNav{
+    height: 0px;
+  }
+} */

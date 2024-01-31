@@ -22,3 +22,13 @@ li {
   height: 100vh;
 
 }
+::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 20px;
+  padding: 2px;
+  background: #000;
+}
+::-webkit-scrollbar-thumb{
+  background: #303030;
+  border-radius: 30px;
+}

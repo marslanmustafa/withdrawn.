@@ -2,7 +2,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
-import { Login, SearchPage, PropertiesPage } from './pages/index';
+import { Login, SearchPage, PropertiesPage, Wishlist } from './pages/index';
 import { BottomNavbar } from "./components";
 function App() {
   return (
@@ -30,7 +30,7 @@ function App() {
             path="/wishlist"
             element={
               <Layout>
-                <PropertiesPage />
+                <Wishlist />
               </Layout>
             }
           />

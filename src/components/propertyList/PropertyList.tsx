@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { Heart, BedIcon, BathIcon, CarFrontIcon, Move3DIcon, HomeIcon } from "lucide-react";
 import "./propertyList.css";
-import propertyData from "../data/data.json";
-// interface PropertyListProps {
-//   propertyData: PropertyData[];
-//   clickedSuggestion: string;
-// }
+import { setWishlistCount, setWishlist, setSearchResult } from "../../store/property";
+import { RootState } from '../../store/rootReducer';
+import { useDispatch, useSelector } from "react-redux";
+interface PropertyListProps {
+  propertyData: PropertyData[];
+  type: string;
+}
 
 interface PropertyData {
+  id: number;
   address: string;
   image: string;
   details: {
@@ -32,9 +35,9 @@ interface PropertyData {
   wishlisted: boolean;
 }
 
-const PropertyList: React.FC = () => {
+const PropertyList: React.FC<PropertyListProps> = ({propertyData,type}) => {
+  const dispatch = useDispatch();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [filteredProperty, setFilteredProperty] = useState<PropertyData[]>(propertyData);
 
   useEffect(() => {
     const handleResize = () => {
@@ -48,23 +51,39 @@ const PropertyList: React.FC = () => {
     };
   }, []);
 
-  // useEffect(() => {
-  //   // Filter properties based on the clicked suggestion
-  //   const filtered = propertyData.filter(property =>
-  //     property.address.toLowerCase().includes(clickedSuggestion.toLowerCase())
-  //   );
-  //   setFilteredProperty(filtered);
-  // }, [clickedSuggestion, propertyData]);
-
-  const toggleWishlist = (index: number) => {
-    const updatedProperties = [...filteredProperty];
-    updatedProperties[index].wishlisted = !updatedProperties[index].wishlisted;
-    setFilteredProperty(updatedProperties);
-  };
+const wishlist = useSelector((state: RootState) => state.propertyData.wishlist);
+const toggleWishlist = (property: PropertyData) => {
+  if (type !== "wishlist") {
+    const updatedPropertyData = propertyData.map((item: PropertyData) => {
+      if (item.id === property.id) {
+        return { ...item, wishlisted: !item.wishlisted };
+      }
+      return item;
+    });
+    dispatch(setSearchResult(updatedPropertyData));
+    // Assuming propertyData is managed by Redux, dispatch an action to update the state
+    // dispatch(updatePropertyData(updatedPropertyData));
+    console.log(updatedPropertyData, 'updatedPropertyData');
+  } 
+  const propertyIndex = wishlist.findIndex((item:PropertyData) => item.id === property.id);
+  
+  if (propertyIndex !== -1) {
+      const filteredProperty = wishlist.filter((item:PropertyData) => item.id !== property.id);
+      dispatch(setWishlistCount(filteredProperty.length));
+      dispatch(setWishlist(filteredProperty));
+  } else {
+    const updatedProperties = [...wishlist, { ...property, wishlisted: true }];
+      console.log(updatedProperties,'updatedProperties')
+      dispatch(setWishlistCount(updatedProperties.length));
+      dispatch(setWishlist(updatedProperties));
+  }
+};
+console.log(propertyData,'propertyData')
+const itemsToRender = type === "wishlist" ? wishlist : propertyData;
 
   return (
     <div className="propertyList">
-      {filteredProperty.map((property: PropertyData, index: number) => (
+      {itemsToRender.map((property: PropertyData, index: number) => (
         <div className="property" key={index}>
           <div className="propertyImage">
             <img src={property.image} alt="" />
@@ -73,7 +92,7 @@ const PropertyList: React.FC = () => {
             <button
               type="button"
               className="wishListBtn"
-              onClick={() => toggleWishlist(index)}
+              onClick={() => toggleWishlist(property)}
             >
               {property.wishlisted ? (
                 <Heart fill="#fff" className="heartIcon" />
